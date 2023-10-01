@@ -1,0 +1,155 @@
+:root{
+    --bluestrong: #087381;
+    --bluelight: #25b7d1;
+    --degradado:linear-gradient(90deg, var(--bluelight),var(--bluestrong));
+}
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+*::selection{
+    background: var(--bluelight);
+    color: white;
+}
+
+html{
+    font-size: 62.4%;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+.heading {
+    text-align: center;
+    background: var(--bluestrong);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 2rem;
+    color: var(--bluestrong);
+}
+
+header .logo span {
+    color: var(--bluelight);
+}
+
+header .navbar a{
+    font-size: 1.8rem;
+    margin-left: 2rem;
+    color: var(--bluestrong);
+}
+
+header .navbar a:hover {
+    color: var(--bluelight);
+}
+
+header input{
+    display: none;
+}
+
+header label {
+    font-size: 3rem;
+    color: var(--bluestrong);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(down_light.png) no-repeat;
+    background-size: contain;
+    background-position-y: 50pt;
+    background-position-x: right;
+}
+
+.inicio .image img{
+    width: 70vh;
+    animation: float 2s linear infinite;
+}
+
+@keyframes float {
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(3.5rem);
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 0 9%;
+    padding-top: 7.5rem;
+    padding-bottom: 2rem;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    border-radius: 5rem;
+    background: var(--degradado);
+    font-size: 1.8rem;
+    color:white;
+    cursor:pointer;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    transition: all .3s linear;
+}
+
+.btn:hover{
+    transform: scale(1.07);
+}
+
+.inicio .content h3{
+    font-size: 5.5rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.inicio .content h3 span{
+    color: var(--bluelight);
+    text-transform: uppercase;
+}
+
+.inicio .content p{
+    font-size: 1.7rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+
+
