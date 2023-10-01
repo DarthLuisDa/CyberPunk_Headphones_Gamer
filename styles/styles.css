@@ -92,13 +92,13 @@ header label {
     justify-content: center;
     background: url(down_light.png) no-repeat;
     background-size: contain;
-    background-position-y: 50pt;
-    background-position-x: right;
+    background-position-y: 60pt;
+    background-position-x: 530pt;
 }
 
 .inicio .image img{
     width: 70vh;
-    animation: float 2s linear infinite;
+    animation: float 3s linear infinite;
 }
 
 @keyframes float {
@@ -150,6 +150,45 @@ section{
     color: #666;
     padding: 1rem 0;
 }
+
+.audífonos .caja-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.audífonos .caja-contenedor .caja{
+    flex: 1 1 30rem;
+    background: white;
+    border-radius: 12rem;
+    border: 1rem var(--degradado);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    margin: 2rem;
+    padding: 4rem 2rem;
+    text-align: center;
+    transition: 2s linear;
+}
+
+.audífonos .caja-contenedor .caja img{
+    height: 30rem;
+}
+
+.audífonos .caja-contenedor .caja h3{
+    font-size: 2rem;
+    color: var(--bluelight);
+    padding-top: 1rem;
+}
+
+ .caja-contenedor .caja p{
+    font-size: 2rem;
+    color: #333;
+    padding: 1rem ;
+}
+
+
+
+
 
 
 
