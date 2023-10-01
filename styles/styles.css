@@ -262,5 +262,115 @@ section{
     padding: 1rem ;
 }
 
+.deotragalaxia {
+    background:url(symbol_empire.png) no-repeat;
+    size-adjust: 100pt ;
+    background-position-x: 100px;
+    background-position-y: 100px;
+    background-position: center;
+    padding-bottom: 2rem;
+}
+
+.deotragalaxia {
+     background-color: #333;
+}
+.deotragalaxia .heading {
+    color: var(--bluelight);
+}
+
+.deotragalaxia .columna{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.deotragalaxia .columna .image{
+    flex: 1 1 40rem;
+}
+
+.deotragalaxia .columna .image img{
+    width: 85%;
+    background-position-x: left;
+    background-position-y: center;
+}
+
+.deotragalaxia .columna .content{
+    flex: 1 1 40rem;
+}
+
+.deotragalaxia .columna .content h3{
+    font-size: 7rem;
+    color: #c21221;
+}
+
+.deotragalaxia .columna .content p{
+    font-size: 3rem;
+    color: white;
+    padding: 1rem 0;
+}
+
+.deotragalaxia .columna .content .bottons a:last-child{ 
+    margin-left: 5rem;
+}
+
+.suscribete{
+    text-align: center;
+    padding: 5rem 1rem;
+    background: url() no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.suscribete h3{
+    color: var(--bluestrong);
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.suscribete p{
+    color: #333;
+    font-size: 1.6rem;
+    margin: 2rem auto;
+    width: 70rem;
+}
+
+.suscribete form{
+    display: flex;
+    max-width: 70rem;
+    border: .2rem solid var(--bluestrong);
+    padding: .5rem;
+    border-radius: 5rem;
+    margin: 2rem auto;
+    height: 5.5rem;
+}
+
+.suscribete form input[type="email"]{
+    padding: 0 2rem;
+    font-size: 1.7rem;
+    background: none;
+    width: 100%;
+    color: var(--bluestrong);
+    text-transform: none;
+    background: none;
+}
+
+.suscribete form input[type="email"]::placeholder{
+    color: var(--bluestrong);
+    text-transform: capitalize;
+}
+
+.suscribete form input[type="submit"]{
+    background: var(--bluestrong);
+    width: 20rem;
+    font-size: 1.7rem;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+.suscribete form input[type="submit"]:hover{
+    color: var(--bluelight)
+}
+
 
 
