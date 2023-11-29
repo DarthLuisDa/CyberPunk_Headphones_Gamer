@@ -1,34 +1,32 @@
-:root{
-    --bluestrong: #087381;
-    --bluelight: #25b7d1;
-    --degradado:linear-gradient(90deg, var(--bluelight),var(--bluestrong));
+:root{    /* Seleccionar el elemento raiz del documento, es prioridad por encima del HTML */
+    --bluestrong: #087381;  /* Colores de Fondo */
+    --bluelight: #25b7d1;   /* Colores de Fondo */
+    --degradado:linear-gradient(90deg, var(--bluelight),var(--bluestrong));   /* Colores de Fondo con degradado */
 }
 
-
+/* Fuente/Tipo/Estilo de Letra en todo el Documento */
 *{
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none;
-    border: none;
+    font-family: 'Poppins', sans-serif; /* Fuente */
+    margin: 0;  /* Separacion de Texto */
+    padding: 0px;   /* Separacion/Centrar Texto */
+    box-sizing: border-box; /* Bordes */
+    text-decoration: none;  /*  Para que no subraye */
+    outline: none;  /* Para que no ponga linea */
+    border: none;  /* Sin borde */
 }
 
-*::selection{
-    background: var(--bluelight);
-    color: white;
-}
-
+/* Tamanio de Letra en todo el documento */
 html{
     font-size: 62.4%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
+/* Color del Body */
 body{
     background-color: aliceblue;
 }
 
+/* Tamanio del Texto en los Titulos  */
 .heading {
     text-align: center;
     background: var(--bluestrong);
@@ -40,6 +38,7 @@ body{
     padding: 1rem;
 }
 
+/* Tamanio y Ajustes de la Barra de Navegacion */
 header {
     position: fixed;
     top: 0;
@@ -54,38 +53,41 @@ header {
     z-index: 1000;
 }
 
+/* Tamanio y Ajustes en "CyberpunkHeadphonesGamer" */
 header .logo {
     font-size: 2rem;
     color: var(--bluestrong);
 }
 
+/* Cambio de Color en "Cyberpunk" */
 header .logo span {
     color: var(--bluelight);
 }
 
+/* Tamanio y Ajustes en Barra de Navegacion */
 header .navbar a{
     font-size: 1.8rem;
     margin-left: 2rem;
     color: var(--bluestrong);
 }
 
-header .navbar a:hover {
+/* header .navbar a:hover {
     color: var(--bluelight);
-}
+} */
 
 header input{
     display: none;
 }
 
-header label {
+/* header label {
     font-size: 3rem;
     color: var(--bluestrong);
     cursor: pointer;
     visibility: hidden;
     opacity: 0;
-}
+} */
 
-
+/* Parametros de Seccion Inicio */
 .inicio{
     display: flex;
     align-items: center;
@@ -96,11 +98,13 @@ header label {
     background-position-x: 530pt;
 }
 
+/* Tamanio Imagen */
 .inicio .image img{
     width: 70vh;
-    animation: float 3s linear infinite;
+    animation: float 3s ease-in-out infinite;
 }
 
+/* Animacion de todas las imagenes. No es necesario ponerlo en todas las imagenes si la animacion es la misma */
 @keyframes float {
     0%, 100%{
         transform: translateY(0rem);
@@ -108,8 +112,18 @@ header label {
     50%{
         transform: translateY(3.5rem);
     }
-}
+}  
+/*Explicacion sobre la animacion
 
+-El efecto de esta animación es hacer que el elemento parezca flotar hacia arriba y hacia abajo.
+
+-Fotograma clave 1: Este fotograma clave se aplica al principio y al final de la animación. Establece la propiedad transform en translateY(0rem), lo que significa que el elemento no se traducirá verticalmente.
+
+Fotograma clave 2: Este fotograma clave se aplica en el medio de la animación (50%). Establece la propiedad transform en translateY(3.5rem), lo que significa que el elemento se traducirá 3.5rem hacia arriba.
+
+
+
+/* Acomodo de la Seccion Inicio */
 section{
     min-height: 100vh;
     padding: 0 9%;
@@ -117,6 +131,7 @@ section{
     padding-bottom: 2rem;
 }
 
+/* Parametros del Boton en Inicio */
 .btn{
     display: inline-block;
     margin-top: 1rem;
@@ -130,35 +145,45 @@ section{
     transition: all .3s linear;
 }
 
+/* Transformacion Boton en Inicio */
 .btn:hover{
     transform: scale(1.07);
 }
 
+/* Parametros de Texto Lenovo */
 .inicio .content h3{
     font-size: 5.5rem;
     color: #333;
     text-transform: uppercase;
 }
 
+/* Parametros de Texto Lenovo 2*/
 .inicio .content h3 span{
     color: var(--bluelight);
     text-transform: uppercase;
 }
 
+/* Parametros de Texto Descripcion Lenovo*/
 .inicio .content p{
     font-size: 1.7rem;
     color: #666;
     padding: 1rem 0;
 }
 
+
+
+
+/* Seccion Audifonos con Diadema */
 .audífonos {
     background-color: var(--bluelight);
 }
 
+/* Titulo Sonido de .... */
 .audífonos h1{
     color: #333;
 }
 
+/* Texto dentro del rectangulo */
 .audífonos .caja-contenedor {
     display: flex;
     align-items: center;
@@ -166,6 +191,7 @@ section{
     flex-wrap: wrap;
 }
 
+/* Rectangulo Contenedor */
 .audífonos .caja-contenedor .caja{
     flex: 1 1 30rem;
     background: aliceblue;
@@ -178,43 +204,55 @@ section{
     transition: 2s linear;
 }
 
+/* Parametros de la Imagen */
 .audífonos .caja-contenedor .caja img{
     height: 30rem;
     width: 40vh;
-    animation: float 3s linear infinite;
+    animation: animLogo 10s infinite;
 }    
 
-@keyframes  float{
-    0%, 100%{
-        transform: translatex(0rem);
+/* Animacion de la Imagen */
+
+ @keyframes animLogo{
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotateY(0deg);
     }
     50%{
-        transform: translateY(3.5rem);
-    }
-}
+        -webkit-transform: rotate(180deg);
+        transform: rotateY(180deg);
+    } to {
+        -webkit-transform: rotate(360deg);
+        transform: rotateY(360deg);
+        }
+}  
 
+
+/* Parametros del Texto */
 .audífonos .caja-contenedor .caja h3{
     font-size: 2.5rem;
     color: #333;
     padding-top: 4rem;
 }
 
+/* Parametros del Texto 2 */
  .audífonos .caja-contenedor .caja p{
     font-size: 2rem;
     color: #666;
     padding: 1rem ;
 }
 
-
-
+/* Color de Fondo parte 2 */
 .audífonos2 {
     background-color: aliceblue;
 }
 
+/* Color de Titulo */
 .audífonos2 h1{
     color: #333;
 }
 
+/* Parametros caja contenedora */
 .audífonos2 .caja-contenedor {
     display: flex;
     align-items: center;
@@ -235,33 +273,39 @@ section{
     transition: 2s linear;
 }
 
+/* Parametros Imagen */
 .audífonos2 .caja-contenedor .caja img{
     height: 30rem;
     width: 40vh;
     animation: float 3s linear infinite;
 }    
 
-@keyframes  float{
+/* Animacion Imagen */
+
+/* @keyframes  float{
     0%, 100%{
         transform: translatex(0rem);
     }
     50%{
         transform: translateY(3.5rem);
     }
-}
+} */
 
+/* Parametros Titulo 2 */
 .audífonos2 .caja-contenedor .caja h3{
     font-size: 2.5rem;
     color: #333;
     padding-top: 4rem;
 }
-
+/* 
+Parametros Texto 2 */
  .audífonos2 .caja-contenedor .caja p{
     font-size: 2rem;
     color: #666;
     padding: 1rem ;
 }
 
+/* Seccion de otra galaxia */
 .deotragalaxia {
     background:url(symbol_empire.png) no-repeat;
     size-adjust: 100pt ;
@@ -271,9 +315,12 @@ section{
     padding-bottom: 2rem;
 }
 
+/* Color Fondo */
 .deotragalaxia {
      background-color: #333;
 }
+
+/* Color Titulo */
 .deotragalaxia .heading {
     color: var(--bluelight);
 }
@@ -299,11 +346,13 @@ section{
     flex: 1 1 40rem;
 }
 
+/* Texto Titulo */
 .deotragalaxia .columna .content h3{
     font-size: 7rem;
     color: #c21221;
 }
 
+/* Texto parrafo */
 .deotragalaxia .columna .content p{
     font-size: 3rem;
     color: white;
@@ -335,6 +384,7 @@ section{
     width: 70rem;
 }
 
+/* Texto Titulo Suscribete */
 .suscribete form{
     display: flex;
     max-width: 70rem;
@@ -344,7 +394,7 @@ section{
     margin: 2rem auto;
     height: 5.5rem;
 }
-
+/* Texto Parrafo Suscribete */
 .suscribete form input[type="email"]{
     padding: 0 2rem;
     font-size: 1.7rem;
@@ -355,11 +405,13 @@ section{
     background: none;
 }
 
+/* Imput Texto */
 .suscribete form input[type="email"]::placeholder{
     color: var(--bluestrong);
     text-transform: capitalize;
 }
 
+/* Parametros Boton Suscribete */
 .suscribete form input[type="submit"]{
     background: var(--bluestrong);
     width: 20rem;
@@ -368,10 +420,12 @@ section{
     cursor: pointer;
 }
 
+/* Cambio color */
 .suscribete form input[type="submit"]:hover{
     color: var(--bluelight)
 }
 
+/* Seccion Opiniones */
 .opiniones .caja-contenedor{
     display: flex;
     align-items: center;
@@ -411,6 +465,7 @@ section{
     padding: 1rem;
 }
 
+/* Seccion Contactos */
 .contactos{
     display: flex;
     align-items: center;
@@ -481,6 +536,7 @@ section{
     color: var(--bluelight);
 }
 
+/* Footer */
 .footer{
     background-color: #333;
 }
@@ -550,93 +606,12 @@ section{
     text-align: center;
 }
 
-@media(max-width:1200px) {
-    html{
-        font-size: 55%;
-    }
-}
+@import "media.css";  /* Vinculacion al archivo que contiene los MediaQueries */
 
-@media(max-width: 990px){
-    section{
-        padding: 0 3%;
-        padding-top: 7.5rem;
-        padding-bottom: 2rem;
-    }
-}
+/* 
+-Los media queries se pueden colocar en cualquier archivo CSS, pero es común colocarlos en un archivo separado para facilitar su mantenimiento. Este archivo se suele llamar media.css o responsive.css.
 
-@media(max-width: 768px) {
-    header label {
-        visibility: visible;
-        opacity: 1;
-    }    
+-Si los media queries se colocan en el mismo archivo CSS que el resto del código CSS, es importante colocarlos al final del archivo. Esto se debe a que los media queries tienen prioridad sobre las reglas CSS normales. Si los media queries se colocan al principio del archivo, las reglas CSS normales se aplicarán a todos los dispositivos, incluso a los que cumplan con las condiciones de los media queries.
 
-    header .navbar{
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--bluelight); 
-        padding: 1rem 2rem;
-        border-top: .1rem solid rgba(0, 0, 0, .2);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-        transform-origin: top;
-        transform: scaleY(0);
-        opacity: 0;   
-        transition: .2s linear;
-    }
+*/
 
-    header .navbar a{
-        display: block;
-        margin: 1.5rem 3rem;
-        font-size: 2rem;
-    }
-
-    header input:checked ~ .navbar{
-        transform: scaleY(1);
-        opacity: 1;        
-    }
-    
-    header input:checked ~ label::before{
-        content: '\f00d';
-    }
-
-    .inicio{
-        flex-flow: column-reverse;
-    }
-
-    .inicio .image img{
-        width: 100%;
-    }
-
-    .inicio .content h3{
-        font-size: 3.6rem;
-    }
-
-    .inicio .content p{
-        font-size: 1.5rem;
-    }
-
-    .acerca_de{
-        background-position: right;
-    }
-
-    .suscribete p{
-        width: auto;
-    }
-
-}
-
-@media(max-width:450px) {
-    html{
-        font-size: 49%;
-    }
-
-    .audifonos2 .columna .content .bottons a{
-        width: 100%;
-        text-align: center;
-    }
-
-    .audifonos2 .columna .content .bottons a:last-child{
-        margin: 1rem 0;
-    }
-}

@@ -1,0 +1,144 @@
+/*  Media Queries para que el sitio sea responsivo */
+
+/* Tamanio de Texto Responsivo */
+
+@media(max-width:1200px) {
+    html{
+        font-size: 55%;
+    }
+} 
+
+
+/* Representa una consulta de medios en CSS. Define un conjunto de reglas CSS que deben aplicarse cuando el ancho de la ventana gráfica es menor o igual a 1200 píxeles.
+
+@media(max-width:1200px): esta es la declaración de consulta de medios que especifica la condición para aplicar las siguientes reglas CSS. Indica que los estilos deben aplicarse solo cuando el ancho de la ventana gráfica sea menor o igual a 1200 píxeles.
+
+{ html { tamaño de fuente: 55%; } }: Este bloque define las reglas CSS que se aplicarán dentro de la consulta de medios. Apunta al elemento html y establece su propiedad de tamaño de fuente en 55%. Esto significa que cuando el ancho de la ventana gráfica es menor o igual a 1200 píxeles, el tamaño del texto de todo el documento se reducirá al 55% de su tamaño original.
+
+Propósito del código:
+
+El propósito de este código es hacer que la página web sea más responsiva y adaptar el tamaño del texto a pantallas más pequeñas. Al reducir el tamaño de fuente en dispositivos con ventanas gráficas más pequeñas, la página se puede mostrar de manera más efectiva y garantizar que todo el contenido sea legible.*/
+
+/* Ventana Grafica Responsiva */
+
+@media(max-width: 990px){
+    section{
+        padding: 0 3%;
+        padding-top: 7.5rem;
+        padding-bottom: 2rem;
+    }
+}
+
+/* Representa una consulta de medios en CSS. Define un conjunto de reglas CSS que deben aplicarse cuando el ancho de la ventana gráfica es menor o igual a 990 píxeles.
+
+Desglosando el código:
+
+@media (ancho máximo: 990 px): esta es la declaración de consulta de medios que especifica la condición para aplicar las siguientes reglas CSS. Indica que los estilos deben aplicarse solo cuando el ancho de la ventana gráfica sea menor o igual a 990 píxeles.
+
+{sección {relleno: 0 3%; parte superior acolchada: 7,5 rem; fondo acolchado: 2rem; } }: Este bloque define las reglas CSS que se aplicarán dentro de la consulta de medios. Se dirige al elemento de sección y establece sus propiedades de relleno para ajustar su espaciado y márgenes. */
+
+Ventana Grafica Responsiva, Opacidad y Visibilidad
+
+@media(max-width: 768px) {
+    header label {
+        visibility: visible;
+        opacity: 1;
+    }    
+
+/* Representa una consulta de medios en CSS. Define un conjunto de reglas CSS que deben aplicarse cuando el ancho de la ventana gráfica es menor o igual a 768 píxeles.
+
+Desglosando el código:
+
+@media (ancho máximo: 768 px): esta es la declaración de consulta de medios que especifica la condición para aplicar las siguientes reglas CSS. Indica que los estilos deben aplicarse solo cuando el ancho de la ventana gráfica sea menor o igual a 768 píxeles.
+
+{ etiqueta de encabezado { visibilidad: visible; opacidad: 1; } }: Este bloque define las reglas CSS que se aplicarán dentro de la consulta de medios. Se dirige a elementos de etiqueta dentro del elemento de encabezado y establece su propiedad de visibilidad en visible y su propiedad de opacidad en 1.
+
+Propósito del código:
+
+El propósito de este código es mostrar elementos de etiqueta dentro del encabezado cuando el ancho de la ventana gráfica es menor. Al hacer que los elementos de la etiqueta sean visibles y opacos, el código garantiza que se muestren y se pueda interactuar con ellos en dispositivos con pantallas más pequeñas. */
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bluelight); 
+        padding: 1rem 2rem;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;   
+        transition: .2s linear;
+    }
+
+    header .navbar a{
+        display: block;
+        margin: 1.5rem 3rem;
+        font-size: 2rem;
+    }
+
+    header input:checked ~ .navbar{
+        transform: scaleY(1);
+        opacity: 1;        
+    }
+    
+    header input:checked ~ label::before{
+        content: '\f00d';
+    }
+
+    .inicio{
+        flex-flow: column-reverse;
+    }
+
+    .inicio .image img{
+        width: 100%;
+    }
+
+    .inicio .content h3{
+        font-size: 3.6rem;
+    }
+
+    .inicio .content p{
+        font-size: 1.5rem;
+    }
+/* 
+    {
+        background-position: right;
+    } */
+
+    .suscribete p{
+        width: auto;
+    }
+
+}
+
+/* Texto Responsivo */
+
+@media(max-width:450px) {
+    html{
+        font-size: 49%;
+    }
+
+    .audifonos2 .heading .caja-contenedor .caja .btn{
+        width: 100%;
+        text-align: center;
+    }
+
+    .deotragalaxia .columna .image .content .bottons .btn{
+        margin: 1rem 0;
+    }
+}
+
+/* Representa una consulta de medios en CSS. Define un conjunto de reglas CSS que deben aplicarse cuando el ancho de la ventana gráfica es menor o igual a 450 píxeles.
+
+Desglosando el código:
+
+@media(max-width:450px): esta es la declaración de consulta de medios que especifica la condición para aplicar las siguientes reglas CSS. Indica que los estilos deben aplicarse solo cuando el ancho de la ventana gráfica sea menor o igual a 450 píxeles.
+
+{ html { tamaño de fuente: 49%; } }: Este bloque define las reglas CSS que se aplicarán dentro de la consulta de medios. Apunta al elemento html y establece su propiedad de tamaño de fuente en 49%.
+
+Propósito del código:
+
+El propósito de este código es reducir el tamaño de fuente de toda la página web cuando el ancho de la ventana gráfica es menor. Al reducir el tamaño de fuente en dispositivos con ventanas gráficas más pequeñas, la página se puede mostrar de manera más efectiva y garantizar que todo el contenido sea legible.
+ */
